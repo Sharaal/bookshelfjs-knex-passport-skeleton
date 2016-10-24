@@ -25,8 +25,7 @@ module.exports = ({ ensureLoggedOut, User }) => {
   passport.use(new (require('passport-local').Strategy)(
     async (username, password, cb) => {
       try {
-        const user = await User.login(username, password);
-        return cb(null, user);
+        return cb(null, await User.login(username, password));
       } catch (e) {
         return cb(e);
       }
