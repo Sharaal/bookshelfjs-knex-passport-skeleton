@@ -1,0 +1,52 @@
+{
+  "private": true,
+  "name": "bookshelfjs-knex-passport-skeleton",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "http://github.com/dragonprojects/bookshelfjs-knex-passport-skeleton",
+  "author": {
+    "name": "Sharaal",
+    "email": "developer@dragonprojects.de",
+    "url": "http://dragonprojects.de"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dragonprojects/bookshelfjs-knex-passport-skeleton.git"
+  },
+  "readmeFilename": "README.md",
+  "scripts": {
+    "build": "babel src -d dest",
+    "develop": "nodemon src/web.js --exec babel-node",
+    "lint": "eslint src",
+    "postinstall": "npm run build",
+    "start": "node dest/app.js"
+  },
+  "dependencies": {
+    "babel-cli": "^6.7.5",
+    "babel-plugin-transform-async-to-generator": "^6.8.0",
+    "babel-plugin-transform-strict-mode": "^6.11.3",
+    "body-parser": "^1.13.3",
+    "bookshelf": "^0.10.2",
+    "connect-ensure-login": "^0.1.1",
+    "cookie-parser": "^1.3.5",
+    "dotenv": "^2.0.0",
+    "ejs": "^2.3.3",
+    "express": "^4.13.3",
+    "express-session": "^1.11.3",
+    "knex": "^0.12.5",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "sqlite3": "^3.1.6"
+  },
+  "devDependencies": {
+    "eslint": "^3.5.0",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-jsx-a11y": "^2.2.2",
+    "eslint-plugin-import": "^1.16.0",
+    "eslint-plugin-react": "^6.3.0",
+    "nodemon": "^1.10.2"
+  },
+  "engines": {
+    "node": "^6.7.0"
+  }
+}
