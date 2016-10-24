@@ -9,8 +9,9 @@ knex.migrate.latest([config])
     console.log('knex migrate finished');
   });
 
-const ensureLoggedIn = require('./middlewares/ensureLoggedIn')();
-const ensureLoggedOut = require('./middlewares/ensureLoggedOut')();
+const connectEnsureLogin = require('connect-ensure-login');
+const ensureLoggedIn = connectEnsureLogin.ensureLoggedIn();
+const ensureLoggedOut = connectEnsureLogin.ensureLoggedOut();
 
 const bookshelf = require('bookshelf')(knex);
 const User = require('./models/User')(bookshelf);
